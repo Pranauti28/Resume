@@ -1,0 +1,221 @@
+#html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Submission Form</h1>
+    <form action="#" method="post" enctype="multipart/form-data">
+      
+      <!-- Basic Information -->
+      <label>Field Name:
+        <input type="text" name="field_name" required>
+      </label>
+
+      <label>Full Name:
+        <input type="text" name="full_name" required>
+      </label>
+
+      <label>Email Address:
+        <input type="email" name="email" required>
+      </label>
+
+      <label>Phone Number:
+        <input type="tel" name="phone" required>
+      </label>
+
+      <label>Date of Birth:
+        <input type="date" name="dob" required>
+      </label>
+
+      <label>Gender:
+        <select name="gender" required>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label>Marital Status:
+        <select name="marital_status" required>
+          <option value="">Select</option>
+          <option>Single</option>
+          <option>Married</option>
+        </select>
+      </label>
+
+      <label>Nationality:
+        <input type="text" name="nationality" required>
+      </label>
+
+      <label>Address:
+        <textarea name="address" rows="3" required></textarea>
+      </label>
+
+      <!-- Online Profiles -->
+      <label>LinkedIn Profile URL:
+        <input type="url" name="linkedin">
+      </label>
+
+      <label>GitHub Profile URL:
+        <input type="url" name="github">
+      </label>
+
+      <!-- File Uploads -->
+      <label>Upload Profile Photo:
+        <input type="file" name="photo" accept="image/*" required>
+      </label>
+
+      <label>Upload Resume (PDF Only):
+        <input type="file" name="resume" accept=".pdf" required>
+      </label>
+
+      <!-- Career & Education -->
+      <label>Career Objective:
+        <textarea name="objective" rows="4" required></textarea>
+      </label>
+
+      <label>Highest Qualification:
+        <input type="text" name="qualification" required>
+      </label>
+
+      <label>Name of College / University:
+        <input type="text" name="college" required>
+      </label>
+
+      <label>Year of Graduation:
+        <input type="number" name="graduation_year" min="1900" max="2099" required>
+      </label>
+
+      <!-- Skills -->
+      <label>Technical Skills:
+        <input type="text" name="tech_skills" placeholder="HTML, CSS, JavaScript, etc." required>
+      </label>
+
+      <label>Programming Languages Known:
+        <input type="text" name="languages" required>
+      </label>
+
+      <label>Certifications (if any):
+        <textarea name="certifications" rows="2"></textarea>
+      </label>
+
+      <!-- Work Experience -->
+      <label>Work Experience (Years):
+        <input type="number" name="experience" min="0" required>
+      </label>
+
+      <label>Last Company Worked At:
+        <input type="text" name="last_company">
+      </label>
+
+      <label>Your Job Role / Designation:
+        <input type="text" name="designation">
+      </label>
+
+      <!-- Extra Info -->
+      <label>Languages Known:
+        <input type="text" name="known_languages">
+      </label>
+
+      <label>Hobbies:
+        <textarea name="hobbies" rows="2"></textarea>
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" name="declaration" required>
+        I hereby declare that the above information is true and correct to the best of my knowledge.
+      </label>
+
+      <button type="submit">Submit Resume</button>
+    </form>
+  </div>
+</body>
+</html>
+
+#css
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="url"],
+select,
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.checkbox {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox input {
+  margin-right: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
